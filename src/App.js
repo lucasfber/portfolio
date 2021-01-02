@@ -3,7 +3,7 @@ function App() {
     <>
       <h1>Setup successfully!</h1>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
