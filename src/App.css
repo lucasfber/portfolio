@@ -1,0 +1,31 @@
+.header {
+  background-color: lightpink;
+}
+
+.hero {
+  background-color: lightcoral;
+}
+
+.about {
+  background-color: lightblue;
+}
+
+.experience {
+  background-color: lightsalmon;
+}
+
+.work {
+  background-color: lightslategrey;
+}
+
+.contact {
+  background-color: lightgray;
+}
+
+.footer {
+  background-color: #85e;
+}
+
+img {
+  max-width: 300px;
+}

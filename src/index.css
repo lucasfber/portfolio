@@ -28,3 +28,12 @@ img {
   display: block;
   max-width: 100%;
 }
+
+svg {
+  width: 24px;
+  height: 24px;
+}
+
+svg:hover {
+  fill: blue;
+}
