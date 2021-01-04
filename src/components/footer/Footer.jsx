@@ -8,22 +8,22 @@ import './Footer.css';
 export default function Footer() {
   return (
     <footer className="footer">
-      <button className="btn-stt">
+      <button className="btn-stt" type="button">
         <ScrollButton />
       </button>
       <ul className="social-links">
         <li>
-          <a href="#">
+          <a href="#/">
             <LinkedinIcon />
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#/">
             <GitHubIcon />
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#/">
             <CodepenIcon />
           </a>
         </li>
@@ -34,7 +34,9 @@ export default function Footer() {
         </li>
       </ul>
       <p>
-        Design and Code by <span>Lucas Bertoldo</span> &copy; 2021
+        Design and Code by
+        <span>Lucas Bertoldo</span>
+        &copy; 2021
       </p>
     </footer>
   );
