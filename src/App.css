@@ -1,6 +1,10 @@
-.header {
-  background-color: lightpink;
+:root {
+  --primary-blue: #1b242f;
+  --secondary-blue: #252934;
+  --green: #2ecc71;
+  --d-green: #2eba71;
 }
+
 
 .hero {
   background-color: lightcoral;
@@ -22,10 +26,12 @@
   background-color: lightgray;
 }
 
-.footer {
-  background-color: #85e;
-}
-
 img {
   max-width: 300px;
+}
+
+.blur {
+  pointer-events: none;
+  user-select: none;
+  filter: blur(5px) brightness(.7);
 }

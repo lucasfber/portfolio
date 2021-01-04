@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <h2>About me</h2>
       <p>
         Hello! I'm Brittany, a software engineer based in Boston, MA. I enjoy

@@ -3,7 +3,7 @@ import { ReactComponent as LinkedinIcon } from '../../assets/linkedin.svg';
 import { ReactComponent as GitHubIcon } from '../../assets/github.svg';
 import { ReactComponent as GmailIcon } from '../../assets/gmail.svg';
 import { ReactComponent as CodepenIcon } from '../../assets/codepen.svg';
-import { Link } from 'react-router-dom';
+import './Footer.css';
 
 export default function Footer() {
   return (
@@ -34,7 +34,7 @@ export default function Footer() {
         </li>
       </ul>
       <p>
-        Designed and Built by <span>Lucas Bertoldo</span> &copy; 2021
+        Design and Code by <span>Lucas Bertoldo</span> &copy; 2021
       </p>
     </footer>
   );

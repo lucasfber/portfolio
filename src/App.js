@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Home from './pages/Home';
@@ -6,12 +7,14 @@ import WorkPage from './pages/Work';
 import './App.css';
 
 function App() {
+  const [toggle, setToggle] = useState(false);
+
   return (
     <>
       <Router>
-        <Header />
+        <Header toggle={toggle} setToggle={setToggle} />
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" render={() => <Home isBlur={toggle} />} />
           <Route path="/work" component={WorkPage} />
         </Switch>
         <Footer />

@@ -34,6 +34,12 @@ svg {
   height: 24px;
 }
 
-svg:hover {
-  fill: blue;
+ul {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }

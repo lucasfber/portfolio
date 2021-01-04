@@ -1,0 +1,93 @@
+.header {
+  background-color: var(--primary-blue);
+  display: flex;
+  justify-content: space-between;
+  height: 48px;
+  padding: 0 16px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+}
+
+.logo-wrapper a {
+  padding: 6px 0;
+}
+
+.logo-wrapper svg{
+  height: 36px;
+  width: 36px;
+  fill: whitesmoke;
+}
+
+.toggle-menu {
+  height: 48px;
+  padding-left:10px;
+  outline: none;
+}
+
+.toggle-menu svg {
+  width: 28px;
+  height: 28px;
+  fill: whitesmoke;
+}
+
+.close-menu svg {
+  fill: whitesmoke;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: -50%;
+  background-color: var(--secondary-blue);
+  width: 50%;
+  height: 100vh;
+  padding: 16px;
+  text-align: right;
+  z-index: 10;
+  visibility: visible;
+  transition: right 300ms ease-in-out;
+}
+
+.menu.show {
+  right: 0;
+}
+
+.menu ul {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu li {
+  margin: 8px 0;
+}
+
+.menu a {
+  padding: 12px;
+  color: whitesmoke;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 250ms ease-in-out;
+  position: relative;
+}
+
+.menu a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: pink;
+  position: absolute;
+  bottom: 0;
+  right: 16px;
+  transition: width .5s ease-out;
+}
+
+.menu li:hover a::after {
+  width: calc(100% - 16px);
+}
+

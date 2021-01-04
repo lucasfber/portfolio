@@ -1,0 +1,50 @@
+.footer {
+  background-color: var(--primary-blue);
+  color: whitesmoke;
+  padding: 48px 16px 24px 16px;
+  position: relative;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 14px;
+}
+
+span {
+  color: var(--green);
+  font-weight: bold;
+}
+
+.btn-stt {
+  position: absolute;
+  top: -20px;
+  right: 32px;
+  background-color: var(--green);
+  padding: 8px;
+  transition: background-color 250ms ease;
+}
+
+.btn-stt:hover {
+  background-color: var(--d-green);
+}
+
+.btn-stt svg {
+  fill: white;
+}
+
+.social-links {
+  display: flex;
+  padding: 0 16px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0 32px 0;
+}
+
+.social-links svg {
+  fill: #ccc;
+  transition: fill 250ms ease;
+}
+
+.social-links li:hover svg{
+  fill: var(--green)
+}

@@ -4,9 +4,9 @@ import Experience from '../components/experience/Experience';
 import Hero from '../components/hero/Hero';
 import Work from '../components/work/Work';
 
-export default function Home() {
+export default function Home({ isBlur }) {
   return (
-    <main>
+    <main className={isBlur ? 'blur' : ''}>
       <Hero />
       <About />
       <Experience />

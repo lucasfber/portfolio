@@ -3,8 +3,9 @@ import { ReactComponent as Logo } from '../../assets/logo.svg';
 import { ReactComponent as MenuButton } from '../../assets/menu.svg';
 import { ReactComponent as CloseButton } from '../../assets/close.svg';
 import { Link } from 'react-router-dom';
+import './Header.css';
 
-export default function Header() {
+export default function Header({ toggle, setToggle }) {
   return (
     <header className="header">
       <div className="logo-wrapper">
@@ -12,13 +13,16 @@ export default function Header() {
           <Logo />
         </Link>
       </div>
-      <nav>
+      <nav className={toggle ? 'menu show' : 'menu'}>
+        <button className="close-menu">
+          <CloseButton onClick={() => setToggle(false)} />
+        </button>
         <ul>
           <li>
-            <a href="#">About</a>
+            <a href="#about">About</a>
           </li>
           <li>
-            <a href="#">Experience</a>
+            <a href="#experience">Experience</a>
           </li>
           <li>
             <Link to="/work">Work</Link>
@@ -33,11 +37,8 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      <button className="toggle-menu">
+      <button className="toggle-menu" onClick={() => setToggle(true)}>
         <MenuButton />
-      </button>
-      <button className="toggle-menu">
-        <CloseButton />
       </button>
     </header>
   );
