@@ -34,8 +34,7 @@ export default function Footer() {
         </li>
       </ul>
       <p>
-        Design and Code by
-        <span>Lucas Bertoldo</span>
+        Design and Code by <span>Lucas Bertoldo </span>
         &copy; 2021
       </p>
     </footer>

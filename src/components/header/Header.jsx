@@ -20,16 +20,24 @@ const Header = ({ toggle, setToggle }) => (
       </button>
       <ul>
         <li>
-          <a href="#about">About</a>
+          <a onClick={() => setToggle(false)} href="#about">
+            About
+          </a>
         </li>
         <li>
-          <a href="#experience">Experience</a>
+          <a onClick={() => setToggle(false)} href="#experience">
+            Experience
+          </a>
         </li>
         <li>
-          <Link to="/work">Work</Link>
+          <Link onClick={() => setToggle(false)} to="/work">
+            Work
+          </Link>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a onClick={() => setToggle(false)} href="#contact">
+            Contact
+          </a>
         </li>
         <li>
           <a className="resume-link" href="#/resume">

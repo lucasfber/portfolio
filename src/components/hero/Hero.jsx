@@ -1,10 +1,14 @@
+import './Hero.css';
+
 export default function Hero() {
   return (
     <section className="hero">
-      <h1>
-        Hello, I'm <span>Lucas Bertoldo</span>. I'm a full stack web developer.
-      </h1>
-      <h2>I build things for the web.</h2>
+      <div className="main-text">
+        <h1>
+          Hi, I'm <span>Lucas Bertoldo</span>. <br />
+        </h1>
+        <h2> I'm a full stack web developer. I build things for the web.</h2>
+      </div>
     </section>
   );
 }

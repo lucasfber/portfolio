@@ -7,18 +7,18 @@ export default function WorkPage() {
         <div className="challenge">
           <img
             src="https://mattfarley.ca/img/projects/wfdesignbuild.png"
-            alt=""
+            alt="thumbnail-challenge"
             className="thumbnail"
           />
           <h3>
             Title - <span>Company</span>
           </h3>
-          <a href="#">More Info Icone Externo</a>
+          <a href="#/">More Info Icone Externo</a>
           <div className="useful-links">
-            <a href="#" className="github">
+            <a href="#/" className="github">
               GitHub
             </a>
-            <a href="#" className="live">
+            <a href="#/" className="live">
               Live Demo
             </a>
           </div>
@@ -26,18 +26,18 @@ export default function WorkPage() {
         <div className="challenge">
           <img
             src="https://mattfarley.ca/img/projects/wfdesignbuild.png"
-            alt=""
+            alt="challenge-thumbnail"
             className="thumbnail"
           />
           <h3>
             Title - <span>Company</span>
           </h3>
-          <a href="#">More Info Icone Externo</a>
+          <a href="#/">More Info Icone Externo</a>
           <div className="useful-links">
-            <a href="#" className="github">
+            <a href="#/" className="github">
               GitHub
             </a>
-            <a href="#" className="live">
+            <a href="#/" className="live">
               Live Demo
             </a>
           </div>
@@ -45,18 +45,18 @@ export default function WorkPage() {
         <div className="challenge">
           <img
             src="https://mattfarley.ca/img/projects/wfdesignbuild.png"
-            alt=""
+            alt="thumbnail-challenge"
             className="thumbnail"
           />
           <h3>
             Title - <span>Company</span>
           </h3>
-          <a href="#">More Info Icone Externo</a>
+          <a href="#/">More Info Icone Externo</a>
           <div className="useful-links">
-            <a href="#" className="github">
+            <a href="#/" className="github">
               GitHub
             </a>
-            <a href="#" className="live">
+            <a href="#/" className="live">
               Live Demo
             </a>
           </div>

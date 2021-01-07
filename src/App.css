@@ -5,11 +5,6 @@
   --d-green: #2eba71;
 }
 
-
-.hero {
-  background-color: lightcoral;
-}
-
 .about {
   background-color: lightblue;
 }
@@ -34,4 +29,12 @@ img {
   pointer-events: none;
   user-select: none;
   filter: blur(5px) brightness(.7);
+}
+
+main {
+  padding-top: 48px;
+}
+
+section {
+  padding: 32px 24px;
 }

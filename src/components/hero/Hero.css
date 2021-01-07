@@ -1,0 +1,35 @@
+.hero {
+  min-height: calc(100vh - 48px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  background-color: var(--secondary-blue);
+}
+
+.main-text {
+  position: relative;
+  z-index: 1;
+}
+
+.main-text::before {
+  content: '';
+  width: 124px;
+  height: 124px;
+  position: absolute;
+  right: 0;
+  top: 8px;
+  background: url('../../assets/logob.svg') no-repeat center center / cover;
+  opacity: .1;
+  z-index: -1;
+}
+
+.main-text h1 {
+  font-size: 25px;
+}
+
+.main-text h2 {
+  font-size: 20px;
+  color: rgba(245, 245, 245, .7);
+}
