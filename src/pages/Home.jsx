@@ -4,6 +4,7 @@ import Contact from '../components/contact/Contact';
 import Experience from '../components/experience/Experience';
 import Hero from '../components/hero/Hero';
 import Work from '../components/work/Work';
+import './Home.css';
 
 const Home = ({ isBlur }) => (
   <main className={isBlur ? 'blur' : ''}>
