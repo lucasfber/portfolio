@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section className="about" id="about">
       <div className="info">
-        <h2>about me</h2>
+        <h2 className="section-title">about me</h2>
         <p>
           Hello! I'm Brittany, a software engineer based in Boston, MA. I enjoy
           creating things that live on the internet, whether that be websites,

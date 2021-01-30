@@ -1,0 +1,109 @@
+.experience {
+  background-color: var(--primary-blue);
+  color: #fff;
+}
+
+.experience .section-title {
+  color: #fff;
+}
+
+.experience .section-title::after {
+  background-color: #fff;
+}
+
+.timeline {
+  margin-top: 64px;
+  height: 760px;
+  overflow: scroll;
+  /* background-color: red; */
+}
+
+.timeline-item {
+  margin: 0 0 36px 0;
+  position: relative;
+}
+
+/* .timeline-item .label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  background-color: var(--green);
+  border-radius: 50%;
+  border: 1px solid var(--green);
+} */
+
+/* .timeline-item .label::before, .timeline-item .label::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: var(--green);
+  left: 4px;
+} */
+
+/* .timeline-item .label::before {
+  top: -8px;
+  height: 7px;
+}
+
+.timeline-item .label::after {
+  height: 60px;
+  bottom: -61px;
+} */
+/*
+.timeline-item .label:hover {
+  border: 1px solid white;
+} */
+
+.card {
+  max-width: 100%;
+  width: 100%;
+  background-color: var(--secondary-blue);
+  background-color:rgba(40,44,55, .8);
+  border-radius: 3px;
+}
+
+.card-header {
+  /* background-color: var(--green); */
+  padding: 8px 16px;
+  cursor: pointer;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  color: var(--green);
+}
+
+.card-header p {
+  font-size: 14px;
+}
+
+.card-header h4 {
+  font-size: 22px;
+}
+
+.tasks {
+  padding: 16px;
+  /* background-color: white; */
+  color: white;
+  font-size: 14px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  z-index: 20;
+}
+
+.card-header:hover ~ .tasks{
+  display: block;
+}
+
+/* .card::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: -12px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent var(--green) transparent transparent;
+} */
+
+
+
