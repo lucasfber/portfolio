@@ -3,7 +3,7 @@ import React from 'react';
 export default function Contact() {
   return (
     <section className="contact">
-      <h2>Get In Touch</h2>
+      <h2 className="section-title">get in touch</h2>
       <h3>
         If you wanna get in touch, talk to me about a project idea or just say
         hi, fill up the form below or send an email to

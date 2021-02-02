@@ -12,11 +12,15 @@
   width: 100%;
 }
 
+.header.scrolling {
+  box-shadow: 0 10px 30px -10px rgba(2, 12, 27, .7);
+}
+
 .logo-wrapper a {
   padding: 6px 0;
 }
 
-.logo-wrapper svg{
+.logo-wrapper svg {
   height: 36px;
   width: 36px;
   fill: whitesmoke;
@@ -24,7 +28,7 @@
 
 .toggle-menu {
   height: 48px;
-  padding-left:10px;
+  padding-left: 10px;
   outline: none;
 }
 
@@ -41,9 +45,9 @@
 .menu {
   position: absolute;
   top: 0;
-  right: -50%;
+  right: -75%;
   background-color: var(--secondary-blue);
-  width: 50%;
+  width: 75%;
   height: 100vh;
   padding: 16px;
   text-align: right;
@@ -71,27 +75,158 @@
   padding: 12px;
   color: whitesmoke;
   border-bottom: 2px solid transparent;
-  transition: border-bottom 250ms ease-in-out;
+  transition: color 250ms ease-in-out;
   position: relative;
-}
-
-.menu a::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background-color: var(--green);
-  position: absolute;
-  bottom: 0;
-  right: 16px;
-  transition: width .5s ease-out;
+  font-size: 18px;
 }
 
 .menu li:hover a {
-  font-weight: bold;
+  color: var(--green);
+}
+
+.menu li:last-child:hover a::after {
+  width: 0;
+}
+
+.menu li:hover a.btn-resume-link {
+  font-weight: normal;
+  background-color: rgba(46, 204, 113, 0.9);
 }
 
 .menu li:hover a::after {
   width: calc(100% - 16px);
 }
 
+a.btn-resume-link {
+  outline: none;
+  user-select: none;
+  border: none;
+  vertical-align: middle;
+  background-color: var(--green);
+  border-radius: 3.9px;
+  font-size: 17.5px;
+  padding: 12px 24px;
+}
+
+a.btn-resume-link:hover {
+  font-weight: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 0 5%;
+  }
+
+  .menu {
+    right: -50%;
+    width: 50%;
+  }
+
+  .menu ul a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 0 5%;
+  }
+
+  .menu {
+    position: initial;
+    top: 0;
+    height: inherit;
+    z-index: initial;
+    padding: 0;
+    background-color: var(--primary-blue);
+  }
+
+  .menu ul {
+    flex-direction: row;
+    height: inherit;
+    margin-top: initial;
+    justify-content: initial;
+    align-items: center;
+  }
+
+  .menu li {
+    margin: initial;
+    height: inherit;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* .menu li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--green);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: width 0.5s ease-out;
+  } */
+
+ /*  .menu li:hover a::after {
+    width: 0;
+  } */
+
+  .menu li:hover a {
+    color: var(--green);
+  }
+
+  .menu li:hover::after {
+    width: 100%;
+  }
+
+  .menu ul a {
+    font-size: 14px;
+  }
+
+  .toggle-menu {
+    display: none;
+  }
+
+  .close-menu {
+    display: none;
+  }
+
+  .menu li:last-child {
+    flex: 1;
+    margin-right: 0;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .menu li:last-child:hover::after {
+    width: 0;
+  }
+
+  .menu a::after {
+    right: 0;
+  }
+
+  .menu li:hover a {
+    font-weight: initial;
+  }
+
+  a.btn-resume-link {
+    padding: 6px 12px;
+  }
+}
+
+@media screen and (min-width: 1268px) {
+  .header {
+    height: 64px;
+    padding: 0 5%;
+  }
+
+  a.btn-resume-link {
+    padding: 8px 12px;
+  }
+}

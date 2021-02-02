@@ -6,10 +6,14 @@ import { ReactComponent as CodepenIcon } from '../../assets/codepen.svg';
 import './Footer.css';
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="footer">
       <button className="btn-stt" type="button">
-        <ScrollButton />
+        <ScrollButton onClick={scrollToTop} />
       </button>
       <ul className="social-links">
         <li>
@@ -34,7 +38,15 @@ export default function Footer() {
         </li>
       </ul>
       <p>
-        Design and Code by <span>Lucas Bertoldo </span>
+        Design and Code by{' '}
+        <span>
+          <a
+            className="repo-link"
+            href="https://github.com/lucasfber/portfolio"
+          >
+            Lucas Bertoldo{' '}
+          </a>
+        </span>
         &copy; 2021
       </p>
     </footer>

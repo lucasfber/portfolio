@@ -1,7 +1,7 @@
 .footer {
   background-color: var(--primary-blue);
   color: whitesmoke;
-  padding: 48px 16px 8px 16px;
+  padding: 60px 16px 15px 16px;
   position: relative;
   text-align: center;
 }
@@ -10,9 +10,10 @@
   font-size: 14px;
 }
 
-span {
+.repo-link {
   color: var(--green);
   font-weight: bold;
+  margin-right: 5px;
 }
 
 .btn-stt {
@@ -45,6 +46,26 @@ span {
   transition: fill 250ms ease;
 }
 
-.social-links li:hover svg{
-  fill: var(--green)
+.social-links li:hover svg {
+  fill: var(--green);
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 80px 16px 20px 16px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .social-links li {
+    margin: 0 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding: 100px 5% 20px;
+  }
 }

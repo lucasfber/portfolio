@@ -14,7 +14,11 @@ function App() {
       <Router>
         <Header toggle={toggle} setToggle={setToggle} />
         <Switch>
-          <Route exact path="/" render={() => <Home isBlur={toggle} />} />
+          <Route
+            exact
+            path="/"
+            render={() => <Home isBlur={toggle} setToggle={setToggle} />}
+          />
           <Route path="/work" component={WorkPage} />
         </Switch>
         <Footer />

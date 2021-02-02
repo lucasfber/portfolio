@@ -6,18 +6,25 @@ import Hero from '../components/hero/Hero';
 import Work from '../components/work/Work';
 import './Home.css';
 
-const Home = ({ isBlur }) => (
-  <main className={isBlur ? 'blur' : ''}>
-    <Hero />
-    <About />
-    <Experience />
-    <Work />
-    <Contact />
-  </main>
-);
+const Home = ({ isBlur, setToggle }) => {
+  const disposeMenu = () => {
+    if (isBlur) setToggle(false);
+  };
+
+  return (
+    <main className={isBlur ? 'blur' : ''} onClick={disposeMenu}>
+      <Hero isBlur={isBlur} />
+      <About />
+      <Experience />
+      <Work />
+      <Contact />
+    </main>
+  );
+};
 
 Home.propTypes = {
   isBlur: PropTypes.bool.isRequired,
+  setToggle: PropTypes.func.isRequired,
 };
 
 export default Home;

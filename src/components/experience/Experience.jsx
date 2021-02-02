@@ -33,8 +33,8 @@ export default function Experience() {
           <span className="label" />
           <div className="card">
             <div className="card-header">
-              <h4>Frontend Dev at OSF</h4>
               <p>2016</p>
+              <h4>Frontend Dev at OSF</h4>
             </div>
             <ul className="tasks">
               <li>
@@ -56,8 +56,8 @@ export default function Experience() {
           <span className="label" />
           <div className="card">
             <div className="card-header">
-              <h4>Frontend Dev at OSF</h4>
               <p>2016</p>
+              <h4>Frontend Dev at OSF</h4>
             </div>
             <ul className="tasks">
               <li>
@@ -79,8 +79,8 @@ export default function Experience() {
           <span className="label" />
           <div className="card">
             <div className="card-header">
-              <h4>Nao Mostrar</h4>
               <p>2016</p>
+              <h4>Frontend Dev at OSF</h4>
             </div>
             <ul className="tasks">
               <li>

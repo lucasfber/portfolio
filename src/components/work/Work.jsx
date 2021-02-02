@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 export default function Work() {
   return (
     <section className="work">
-      <h2>Some Things I’ve Built</h2>
+      <h2 className="section-title">some things i’ve built</h2>
       <div className="projects-wrapper">
         <div className="project">
           <h3>Project XYZ</h3>
