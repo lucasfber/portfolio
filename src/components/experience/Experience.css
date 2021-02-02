@@ -9,6 +9,7 @@
 
 .experience .section-title::after {
   background-color: #fff;
+  bottom: -10px;
 }
 
 .timeline {

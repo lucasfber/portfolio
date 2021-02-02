@@ -1,0 +1,219 @@
+.work .section-title {
+  font-size: 24px;
+}
+
+.project {
+  border: 1px solid black;
+  text-align: right;
+  color: white;
+  background-color: var(--primary-blue);
+  border-radius: 6px;
+  margin: 40px 0;
+  border: none;
+  box-shadow: 2px 3px 3px rgba(40, 44, 55, 0.8);
+  transition: transform .5s ease-out;
+  transform: scale(.99);
+  cursor: pointer;
+}
+
+.project:hover {
+  transform: scale(1);
+}
+
+.project img {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.project-info {
+  background-color: lightblue;
+  background-color: var(--primary-blue);
+  padding: 16px;
+  text-align: right;
+}
+
+.project-info h3 {
+  font-size: 24px;
+}
+
+.project-info p {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color:rgba(40, 44, 55, 0.8);
+  padding: 10px;
+}
+
+.tech-list {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  color: var(--green);
+  font-weight: bold;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.tech-list li {
+  margin-left: 11px;
+  margin-bottom: 11px;
+  background-color:rgba(40, 44, 55, 0.8);
+  transition: all .5s ease-out;
+  padding: 4px 6px;
+  text-align: right;
+}
+
+.tech-list li:hover {
+  background-color: var(--green);
+  color: whitesmoke;
+}
+
+.useful-links {
+  margin-top: 16px;
+  padding: 10px 16px;
+}
+
+.useful-links a {
+  margin-left: 20px;
+}
+
+.useful-links svg {
+  width: 20px;
+  fill: white;
+}
+
+.useful-links path {
+  transition: all .5s ease-out;
+}
+
+.useful-links a:hover svg path {
+  fill: var(--green);
+}
+
+.btn-see-more {
+  color: whitesmoke;
+  padding: 16px 32px;
+  font-size: 16px;
+  border-radius: 3.9px;
+  letter-spacing: 1px;
+  transition: background-color 0.5s ease-out;
+  border: 1px solid var(--green);
+  max-width: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: var(--green);
+}
+
+.btn-see-more:hover {
+  background-color: #3ab76f;
+  color: white;
+}
+
+@media screen and (min-width: 375px) {
+  .work .section-title {
+    font-size: 28px;
+  }
+
+  .useful-links svg {
+    width: 22px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    padding: 16px 0 0 16px;
+    margin-bottom: 40px;
+  }
+
+  .project img {
+    max-width: 50%;
+  }
+
+  .project-info {
+    max-width: 50%;
+    padding-left: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 230px;
+
+  }
+
+  .project-info p {
+    margin-top: 24px;
+    height: 76%;
+    font-size: 15px;
+  }
+
+  .tech-list {
+    margin: 0 0 0 auto;
+    padding-right: 16px;
+    width: 50%;
+  }
+
+  .useful-links {
+    padding-right: 20px;
+  }
+
+  .btn-wrapper {
+    text-align: center;
+  }
+
+  .btn-see-more {
+    width: 50%;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .work .section-title {
+    font-size: 32px;
+  }
+
+  .project {
+    box-shadow: 3px 4px 5px rgba(40, 44, 55, 0.8)
+  }
+
+  .content {
+    padding: 24px 0 0 24px;
+  }
+
+  .project-info {
+    padding-right: 24px;
+  }
+
+  .project-info h3 {
+    font-size: 26px;
+  }
+
+  .useful-links {
+    padding: 24px;
+  }
+
+  .tech-list {
+    padding-right: 24px;
+    max-width: 50%;
+    margin: 0 0 0 auto;
+  }
+
+  .useful-links svg {
+    width: 26px;
+    height: 25px;
+  }
+
+  .btn-see-more {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 1268px) {
+  .project {
+    max-width: 70%;
+    margin: 0 auto 60px auto;
+    transform: scale(.99);
+  }
+
+  .project:hover {
+    filter: initial;
+    transform: scale(1);
+  }
+}

@@ -47,7 +47,7 @@ export default function Footer() {
             Lucas Bertoldo{' '}
           </a>
         </span>
-        &copy; 2021
+        &copy; {new Date().getFullYear()}
       </p>
     </footer>
   );

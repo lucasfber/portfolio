@@ -12,7 +12,6 @@ const Header = ({ toggle, setToggle }) => {
 
   const handleScroll = () => {
     if (window.pageYOffset > 0) {
-      console.log('Scroll down');
       setScrolling(true);
     } else {
       setScrolling(false);
@@ -20,9 +19,7 @@ const Header = ({ toggle, setToggle }) => {
   };
 
   useEffect(() => {
-    console.log('useEffect', window);
     window.addEventListener('scroll', handleScroll);
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
