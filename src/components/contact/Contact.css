@@ -1,5 +1,6 @@
 .contact {
   color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .contact .section-title {
@@ -8,16 +9,25 @@
 
 .contact .section-title::after {
   background-color: white;
+  bottom: -6px;
 }
 
 .contact h3 {
   margin-top: 64px;
+  padding: 0 10px;
+  line-height: 1.4;
+  text-align: center;
+  font-size: 16px;
+}
+
+.contact a {
+  font-family: monospace;
+  color: var(--green);
 }
 
 .contact form {
   margin-top: 32px;
-  /* border: 1px dashed white; */
-  padding: 16px 0;
+  padding: 16px 6px;
 }
 
 .input-wrapper {
@@ -30,8 +40,8 @@
   bottom: 4px;
   left: 7px;
   font-size: 15px;
-  transition: all .5s ease;
-  color: rgba(255, 255, 255, .5);
+  transition: all 0.5s ease;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .input-wrapper span.typing {
@@ -40,39 +50,195 @@
   color: var(--green);
 }
 
-.contact input[type="text"],
-input[type="email"],
-textarea {
+.input-data {
+  height: 40px;
   width: 100%;
-  padding: 12px 6px 3px 6px;
-  border: none;
+  position: relative;
+  margin: 24px 0;
+}
+
+.input-data input {
   background-color: transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, .7);
-  color: var(--green);
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid silver;
   color: white;
+  font-size: 18px;
+}
+
+.textarea-data {
+  position: relative;
+  margin: 48px 0;
+}
+
+.textarea-data textarea {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid silver;
   font-size: 15px;
-  font-weight: bold;
-  transition: border 50ms ease;
-  /* border: 1px dashed white; */
+  color: white;
+  font-family: monospace;
 }
 
-.contact input[type="text"].fill,
-input[type="email"].fill,
-textarea.fill {
-  border-color: var(--green);
+.textarea-data span {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  color: grey;
+  transition: all 0.3s ease;
+  font-size: 18px;
 }
 
-/* input[type="text"]:valid {
-  border-bottom: 1px solid red;
-} */
-
-.contact input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-  border-bottom: 1px solid var(--green);
-}
-
-.contact input[type="text"]:focus ~ span {
+.textarea-data textarea:focus ~ span,
+.textarea-data textarea:valid ~ span {
+  font-size: 12px;
   color: var(--green);
+  transform: translateY(-180px);
+}
+
+.input-data input:focus ~ span,
+.input-data input:valid ~ span {
+  transform: translateY(-24px);
+  font-size: 12px;
+  color: var(--green);
+}
+
+.input-data .underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+}
+
+.textarea-data .underline {
+  position: absolute;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+}
+
+.textarea-data .underline::after {
+  content: '';
+  position: absolute;
+  background-color: var(--green);
+  height: 100%;
+  width: 100%;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.input-data .underline::after {
+  content: '';
+  position: absolute;
+  background-color: var(--green);
+  height: 100%;
+  width: 100%;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.textarea-data textarea:focus ~ .underline::after,
+.textarea-data textarea:valid ~ .underline::after {
+  transform: scaleX(1);
+}
+
+.input-data input:focus ~ .underline::after,
+.input-data input:valid ~ .underline::after {
+  transform: scaleX(1);
+}
+
+.input-data span {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  pointer-events: none;
+  color: grey;
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+
+.form-control {
+  text-align: right;
+}
+
+.form-control input[type='submit'] {
+  color: var(--green);
+  background-color: transparent;
+  padding: 16px 32px;
+  font-size: 16px;
+  border-radius: 3.9px;
+  letter-spacing: 1px;
+  transition: background-color 0.5s ease-out;
+  border: 2px solid var(--green);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-control input[type='submit']:hover {
+  color: white;
+  background-color: var(--green);
+}
+
+@media screen and (min-width: 375px) {
+  .input-data {
+    margin: 28px 0;
+  }
+
+  .textarea-data {
+    margin: 52px 0;
+  }
+
+  .input-data input:focus ~ span,
+  .input-data input:valid ~ span {
+    font-size: 14px;
+  }
+
+  .textarea-data textarea:focus ~ span,
+  .textarea-data textarea:valid ~ span {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact h3 {
+    font-size: 18px;
+    padding: 0 12px;
+  }
+
+  .contact form {
+    padding: 16px 32px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contact h3 {
+    font-size: 22px;
+    padding: 0 45px;
+  }
+
+  .contact form {
+    padding: 16px 32px;
+    margin-top: 42px;
+  }
+
+  .textarea-data .underline {
+    bottom: 4px;
+  }
+}
+
+@media screen and (min-width: 1268px) {
+  .contact h3 {
+    font-size: 24px;
+    padding: 0 15%;
+    margin-top: 120px;
+  }
+
+  .contact form {
+    max-width: 75%;
+    margin-top: 42px;
+    margin: 42px auto 0 auto;
+  }
 }
 
