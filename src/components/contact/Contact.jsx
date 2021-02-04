@@ -1,14 +1,7 @@
-import React /*  { useState }  */ from 'react';
+import React from 'react';
 import './Contact.css';
 
 export default function Contact() {
-  /* const [isTyping, setIsTyping] = useState(false);
-
-  const handleChange = (e) => {
-    if (e.target.value !== '') setIsTyping(true);
-    else setIsTyping(false);
-  };
- */
   return (
     <section className="contact">
       <h2 className="section-title">get in touch</h2>
