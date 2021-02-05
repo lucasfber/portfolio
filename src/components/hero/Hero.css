@@ -15,28 +15,6 @@
   backface-visibility: hidden;
 }
 
-/* .hero::before {
-  content: '';
-  width: 124px;
-  height: 124px;
-  position: absolute;
-  right: 0;
-  bottom: 8px;
-  background: url('../../assets/ilust-2.svg') no-repeat center center / cover;
-  z-index: 0;
-}
-
-.hero::after {
-  content: '';
-  width: 124px;
-  height: 124px;
-  position: absolute;
-  right: 0;
-  bottom: 8px;
-  background: url('../../assets/ilust.svg') no-repeat center center / cover;
-  z-index: 1;
-} */
-
 .main-text h1 {
   font-size: clamp(30px, 8vw, 72px);
   animation-name: moveInLeft;
@@ -60,7 +38,8 @@
   transition: background-color 0.5s ease-out;
   border: 1px solid var(--green);
   margin-top: 32px;
-  animation: moveInTop 500ms ease-out;
+  animation: moveInTop 500ms ease-out 0.75s;
+  animation-fill-mode: backwards;
 }
 
 .btn-cta:hover {
@@ -147,11 +126,11 @@
   }
 
   .hero:hover::before {
-    transform: scale(1.1)
+    transform: scale(1.1);
   }
 
   .hero:hover::after {
-    transform: scale(1.1)
+    transform: scale(1.1);
   }
 
   .hero::after {
