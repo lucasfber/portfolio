@@ -13,8 +13,8 @@ function Textarea({ label, cols, rows, required }) {
 }
 
 Textarea.defaultProps = {
-  cols: 30,
-  rows: 10,
+  cols: '30',
+  rows: '10',
 };
 
 Textarea.propTypes = {

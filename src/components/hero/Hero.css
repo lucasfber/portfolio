@@ -12,6 +12,7 @@
 .main-text {
   position: relative;
   z-index: 1;
+  backface-visibility: hidden;
 }
 
 /* .hero::before {
@@ -38,12 +39,16 @@
 
 .main-text h1 {
   font-size: clamp(30px, 8vw, 72px);
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
 
 .main-text h2 {
   font-size: 20px;
   font-size: clamp(20px, 5vw, 80px);
   color: rgba(245, 245, 245, 0.7);
+  animation: moveInRight 1s ease-out;
 }
 
 .btn-cta {
@@ -55,11 +60,56 @@
   transition: background-color 0.5s ease-out;
   border: 1px solid var(--green);
   margin-top: 32px;
+  animation: moveInTop 500ms ease-out;
 }
 
 .btn-cta:hover {
   background-color: var(--green);
   color: white;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
 @media screen and (min-width: 768px) {
