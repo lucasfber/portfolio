@@ -1,4 +1,6 @@
 import React from 'react';
+import InputText from '../input-text/InputText';
+import Textarea from '../text-area/Textarea';
 import './Contact.css';
 
 export default function Contact() {
@@ -11,42 +13,13 @@ export default function Contact() {
         <a href="mailto:lucas.fber@gmail.com"> lucas.fber@gmail.com </a>
       </h3>
       <form>
-        <div className="input-data">
-          <input type="text" required />
-          <div className="underline" />
-          <span>Name</span>
-        </div>
-        <div className="input-data">
-          <input type="email" required />
-          <div className="underline" />
-          <span>Email</span>
-        </div>
-        <div className="input-data">
-          <input type="text" required />
-          <div className="underline" />
-          <span>Subject</span>
-        </div>
-        <div className="textarea-data">
-          <textarea cols="30" rows="10" required />
-          <div className="underline" />
-          <span>Message</span>
-        </div>
+        <InputText type="text" label="Name" required />
+        <InputText type="email" label="Email" required />
+        <InputText type="text" label="Subject" required />
+        <Textarea label="Message" required />
         <div className="form-control">
           <input type="submit" value="Submit" />
         </div>
-
-        {/*         <div className="input-wrapper">
-          <input
-            className={isTyping ? 'fill' : ''}
-            type="text"
-            onChange={handleChange}
-          />
-          <span className={isTyping ? 'typing' : ''}>Name</span>
-        </div> */}
-        {/* <input type="email" placeholder="Email" />
-        <input type="text" placeholder="Subject" />
-        <textarea cols="30" rows="10" placeholder="Message" />
-        <input type="submit" value="Submit" /> */}
       </form>
     </section>
   );
