@@ -3,9 +3,9 @@ import './Timeline.css';
 import PropTypes from 'prop-types';
 import { EXPERIENCES } from '../../services/data';
 
-function Timeline() {
+function Timeline({ className }) {
   return (
-    <ul className="timeline">
+    <ul className={`timeline ${className}`}>
       {EXPERIENCES.map((item) => (
         <Timeline.TimelineItem key={item.id} item={item} />
       ))}

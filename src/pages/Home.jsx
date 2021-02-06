@@ -1,3 +1,4 @@
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import About from '../components/about/About';
 import Contact from '../components/contact/Contact';

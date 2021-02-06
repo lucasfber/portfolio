@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 import InputText from '../input-text/InputText';
 import Textarea from '../text-area/Textarea';
 import './Contact.css';
@@ -6,7 +7,10 @@ import './Contact.css';
 export default function Contact() {
   return (
     <section className="contact">
-      <h2 className="section-title">get in touch</h2>
+      <ScrollAnimation animateIn="fadeIn" animateOnce>
+        <h2 className="section-title">get in touch</h2>
+      </ScrollAnimation>
+
       <h3>
         If you wanna get in touch, talk to me about a project idea, fill up the
         form below or send an email to{' '}
