@@ -13,8 +13,13 @@ export default function Work({ myRef }) {
 
       <div className="projects-grid">
         {PROJECTS.map((project) => (
-          <ScrollAnimation animateIn="fadeIn" animateOnce delay={500}>
-            <ProjectCard key={project.id} project={project} />
+          <ScrollAnimation
+            key={project.id}
+            animateIn="fadeIn"
+            animateOnce
+            delay={500}
+          >
+            <ProjectCard project={project} />
           </ScrollAnimation>
         ))}
       </div>

@@ -16,15 +16,17 @@ export default function Contact() {
         form below or send an email to{' '}
         <a href="mailto:lucas.fber@gmail.com"> lucas.fber@gmail.com </a>
       </h3>
-      <form>
-        <InputText type="text" label="Name" required />
-        <InputText type="email" label="Email" required />
-        <InputText type="text" label="Subject" required />
-        <Textarea label="Message" required />
-        <div className="form-control">
-          <input type="submit" value="Submit" />
-        </div>
-      </form>
+      <ScrollAnimation animateIn="fadeInUp" animateOnce>
+        <form>
+          <InputText type="text" label="Name" required />
+          <InputText type="email" label="Email" required />
+          <InputText type="text" label="Subject" required />
+          <Textarea label="Message" required />
+          <div className="form-control">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </ScrollAnimation>
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 import './Timeline.css';
 import PropTypes from 'prop-types';
 import { EXPERIENCES } from '../../services/data';
@@ -16,27 +17,29 @@ function Timeline({ className }) {
 Timeline.TimelineItem = ({ item }) => (
   <li className="timeline-item">
     <span className="label" />
-    <div className="card">
-      <div className="card-header">
-        {!item.to && !item.current && <p>{item.from}</p>}
-        {item.current && <p>{item.from} - currently</p>}
-        {item.to && item.from !== item.to && (
-          <p>
-            {item.from} to {item.to}
-          </p>
-        )}
-        <h4>
-          {item.position} at {item.company}
-        </h4>
+    <ScrollAnimation animateIn="fadeIn" animateOnce>
+      <div className="card">
+        <div className="card-header">
+          {!item.to && !item.current && <p>{item.from}</p>}
+          {item.current && <p>{item.from} - currently</p>}
+          {item.to && item.from !== item.to && (
+            <p>
+              {item.from} to {item.to}
+            </p>
+          )}
+          <h4>
+            {item.position} at {item.company}
+          </h4>
+        </div>
+        <ul className="tasks">
+          {item.tasks.map((task) => (
+            <li key={task}>
+              <p>{task}</p>
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul className="tasks">
-        {item.tasks.map((task) => (
-          <li key={task}>
-            <p>{task}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
+    </ScrollAnimation>
   </li>
 );
 
