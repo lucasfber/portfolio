@@ -86,11 +86,13 @@
 
 .menu li:last-child:hover a::after {
   width: 0;
+  color: whitesmoke;
 }
 
 .menu li:hover a.btn-resume-link {
   font-weight: normal;
   background-color: rgba(46, 204, 113, 0.9);
+  color: whitesmoke;
 }
 
 .menu li:hover a::after {
@@ -103,13 +105,10 @@ a.btn-resume-link {
   border: none;
   vertical-align: middle;
   background-color: var(--green);
+  transition: background-color 250ms ease-in-out;
   border-radius: 3.9px;
   font-size: 17.5px;
   padding: 12px 24px;
-}
-
-a.btn-resume-link:hover {
-  font-weight: normal;
 }
 
 @media screen and (min-width: 768px) {
@@ -147,6 +146,7 @@ a.btn-resume-link:hover {
     margin-top: initial;
     justify-content: initial;
     align-items: center;
+    animation: moveInBottom 1s ease-out;
   }
 
   .menu li {
@@ -157,22 +157,6 @@ a.btn-resume-link:hover {
     flex-direction: column;
     justify-content: center;
   }
-
-  /* .menu li::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background-color: var(--green);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transition: width 0.5s ease-out;
-  } */
-
- /*  .menu li:hover a::after {
-    width: 0;
-  } */
 
   .menu li:hover a {
     color: var(--green);
@@ -195,8 +179,8 @@ a.btn-resume-link:hover {
   }
 
   .menu li:last-child {
-    flex: 1;
     margin-right: 0;
+    margin-left: auto;
 
     flex-direction: row;
     align-items: center;

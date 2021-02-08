@@ -59,6 +59,10 @@
     position: relative;
   }
 
+  .timeline-item:first-child {
+    margin-top: 32px;
+  }
+
   .timeline-item .animated {
     display: flex;
     justify-content: flex-end;
@@ -89,7 +93,7 @@
   }
 
   .timeline-item:last-child::after {
-    height: 220px;
+    height: 110%;
   }
 
   .timeline-item:nth-child(2n) .animated {
@@ -143,6 +147,13 @@
     height: 124%;
   }
 }
+
+@media screen and (min-width: 1195px) {
+  .timeline-item::after {
+    height: 130%;
+  }
+}
+
 
 @media screen and (min-width: 1268px) {
   .timeline {
